@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -23,10 +24,15 @@ public class MailReceiverController {
             consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE,
             produces = {MediaType.APPLICATION_JSON_VALUE})
     public Map<String, Object> mailgunReceiver(@RequestParam Map<String, Object> mailData){
-
+        System.out.println();
+        System.out.println("================ Mail payload - Begin ======================");
         for (Map.Entry<String,Object> entry : mailData.entrySet()){
-            System.out.println("[Sheik-mail-input]Key = " + entry.getKey() + ", Value = " + entry.getValue());
+            System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
         }
-        return null;
+        System.out.println("================ Mail payload - End ======================");
+        System.out.println();
+        Map<String, Object> rs = new HashMap<>();
+        rs.put("status", "success");
+        return rs;
     }
 }

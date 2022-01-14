@@ -43,6 +43,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/api/v1/chat/live/customer/send").permitAll()
                 .antMatchers("/api/v1/chat/live/customer/get/**").permitAll()
                 .antMatchers("/api/vi/chat/live/connect").permitAll()
+                .antMatchers("/api/vi/webhook/mg/receive").permitAll()
 
                 .antMatchers("/v2/api-docs/**").permitAll()
                 .antMatchers("/swagger-ui.html").permitAll()
