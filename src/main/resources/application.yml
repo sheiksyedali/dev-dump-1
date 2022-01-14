@@ -2,8 +2,8 @@ server.port: 9090
 
 logging:
   level:
-    ROOT: DEBUG
-    com.ecomshop.deskplus: DEBUG
+    ROOT: INFO
+    com.ecomshop.deskplus: INFO
 
 spring:
   datasource:
